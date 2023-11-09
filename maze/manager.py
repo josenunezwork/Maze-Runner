@@ -31,6 +31,8 @@ class MazeManager:
                         if self.maze[ny, nx] == False:
                             movable_walls.append((x, y))
                             break
+            self.pathfinder.recalculate_path()#IMPLEMENT LATER
+
 
         # Randomly select a wall and move it
         if movable_walls:
